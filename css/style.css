@@ -1,0 +1,503 @@
+/* Start Global Rules */
+:root {
+    --main-color: #223db6;
+    --text-color: rgb(53, 53, 53);
+    --main-transition: all 0.5s linear;
+}
+
+@font-face {
+    font-family: "NotoKufiArabic";
+    src: url(../webfonts/Noto_Kufi_Arabic/NotoKufiArabic-VariableFont_wght.ttf);
+}
+
+body {
+    font-family: "NotoKufiArabic";
+}
+
+a {
+    text-decoration: none;
+}
+
+.main-title {
+    text-align: center;
+    position: relative;
+    font-weight: 900;
+    font-size: 4rem;
+    color: var(--main-color);
+}
+
+.main-title::after,
+.main-title::before {
+    content: "";
+    height: 5px;
+    width: 35%;
+    background-color: var(--main-color);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+
+.main-title::after {
+    right: 0%;
+}
+
+.main-title::before {
+    left: 0%;
+}
+
+@media screen and (max-width:500px) {
+
+    .main-title::after,
+    .main-title::before {
+        width: 20%;
+    }
+}
+
+/* End Global Rules */
+
+/* start Navbar*/
+.navbar {
+    z-index: 12222222;
+}
+
+.nav-link {
+    color: var(--text-color);
+    font-weight: 900;
+    font-size: 1.1rem;
+    position: relative;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    background-color: var(--main-color);
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+}
+
+.nav-link:hover::after {
+    width: 90%;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--main-color) !important;
+}
+
+.nav-link.active::after {
+    width: 90%;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 3px var(--main-color) !important;
+}
+
+/* End Navbar */
+
+/* Start Home */
+.home {
+    background-image: url(../img/Dna-6973.gif);
+    background-position: center center;
+    background-size: cover;
+}
+
+.home .container h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    color: rgb(255, 255, 255);
+}
+
+.home .container h1 span {
+    color: var(--main-color);
+}
+
+.home .container .button a {
+    padding: 0%;
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: white;
+    padding: .5rem 2.5rem;
+    border: 3px solid white;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    margin: 0.8rem .8rem 0;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+}
+
+.home .container .button :first-child {
+    background-color: var(--main-color);
+}
+
+.home .container .button :first-child:hover,
+.home .container .button :nth-child(2) {
+    background-color: white;
+    color: var(--main-color);
+    border-color: var(--main-color);
+}
+
+.home .container .button :nth-child(2):hover {
+    background-color: var(--main-color);
+    color: white;
+    border-color: white;
+}
+
+/* End Home */
+
+/* Start Features */
+.feature .container {
+    transform: translateY(-20%);
+    -webkit-transform: translateY(-20%);
+    -moz-transform: translateY(-20%);
+    -ms-transform: translateY(-20%);
+    -o-transform: translateY(-20%);
+}
+
+
+.feature .container .card {
+    overflow: hidden;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+}
+
+.feature .container .card:hover {
+    transform: translateY(-5%);
+    -webkit-transform: translateY(-5%);
+    -moz-transform: translateY(-5%);
+    -ms-transform: translateY(-5%);
+    -o-transform: translateY(-5%);
+}
+
+.feature .container .card .icon {
+    width: 60px;
+    height: 60px;
+    margin: auto;
+    display: grid;
+    place-items: center;
+    background-color: white;
+    font-size: 1.5rem;
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+    box-shadow: 0 0 3px var(--main-color);
+}
+
+.feature .container .card h2 {
+    color: var(--main-color);
+    font-weight: 900;
+}
+
+.feature .container .card p {
+    color: var(--text-color);
+    font-weight: 300;
+    font-size: .8rem;
+}
+
+@media screen and (max-width:767px) {
+    .feature .container {
+        transform: translateY(-10%);
+        -webkit-transform: translateY(-10%);
+        -moz-transform: translateY(-10%);
+        -ms-transform: translateY(-10%);
+        -o-transform: translateY(-10%);
+    }
+}
+
+/* End Features */
+
+/* Start Intro */
+.intro .information {
+    background-color: var(--main-color);
+    color: white;
+    padding: 3rem 5rem;
+}
+
+.intro .information h2 {
+    text-align: center;
+    font-weight: 900;
+    font-size: 2rem;
+    position: relative;
+}
+
+.intro .information h2::after,
+.intro .information h2::before {
+    content: "";
+    height: 3px;
+    width: 20%;
+    background-color: var(--text-color);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+
+.intro .information h2::after {
+    right: 0%;
+}
+
+.intro .information h2::before {
+    left: 0%;
+}
+
+.intro .information p {
+    line-height: 1.8;
+}
+
+
+.intro .video {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(5%, -50%);
+    -webkit-transform: translate(5%, -50%);
+    -moz-transform: translate(5%, -50%);
+    -ms-transform: translate(5%, -50%);
+    -o-transform: translate(5%, -50%);
+}
+
+@media screen and (max-width:992px) {
+    html {
+        font-size: 12px;
+    }
+
+    .intro .information {
+        padding: 1rem 2rem;
+    }
+
+    .intro .video {
+        position: static;
+        transform: translate(0px, 0px);
+        -webkit-transform: translate(0px, 0px);
+        -moz-transform: translate(0px, 0px);
+        -ms-transform: translate(0px, 0px);
+        -o-transform: translate(0px, 0px);
+    }
+}
+
+/* End Intro */
+
+/* Start Video */
+.video .main-title {
+    font-size: 2.3rem;
+}
+
+.video .text {
+    position: absolute;
+    width: 90%;
+    bottom: 20%;
+    left: 5%;
+    background-color: rgba(255, 255, 255, 0.678);
+    text-align: center;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.video .text::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-color);
+    opacity: 0;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+}
+
+.video .text:hover::after {
+    opacity: 1;
+    left: 0;
+}
+
+.video .text a {
+    color: var(--main-color);
+    padding: 1.5rem;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+    position: relative;
+    z-index: 5;
+}
+
+.video .text:hover a {
+    color: white;
+}
+
+.video .text h3,
+.video .text i {
+    font-size: 2rem;
+    font-weight: 800;
+    margin: .5rem 0;
+}
+
+.video img {
+    height: 100%;
+}
+
+@media screen and (max-width:500px) {
+
+    .main-title::after,
+    .main-title::before {
+        width: 10%;
+    }
+}
+
+/* End Video */
+
+/* Start Article */
+.article .text {
+    padding: 1rem 1.5rem;
+}
+
+.article .text h3 {
+    font-size: 2rem;
+    color: var(--main-color);
+    font-weight: 500;
+    padding: 1rem 0;
+}
+
+.article .text p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.article .text a {
+    font-size: 1.3rem;
+}
+
+.article .img {
+    position: relative;
+}
+
+.article .img img {
+    height: 110%;
+    position: absolute;
+    top: -5%;
+}
+
+@media screen and (max-width:992px) {
+    .article .img img {
+        position: static
+    }
+}
+
+/* End Article */
+
+/* Start Contact */
+.btn-book {
+    display: block;
+    text-align: center;
+    background-color: var(--main-color);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border: 1px solid transparent;
+    font-size: 1.3rem;
+}
+
+.btn-book:hover {
+    background-color: transparent;
+    border: 1px solid var(--main-color);
+}
+
+/* End Contact */
+
+/* End Contact */
+.footer {
+    background-color: var(--main-color);
+}
+
+.footer .footer-title {
+    color: white;
+    font-weight: 900;
+    font-size: 1.5rem;
+    padding: .5rem 0rem ;
+    position: relative;
+}
+
+.footer .footer-title::after {
+    content: "";
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 40%;
+    height: 3px;
+}
+.footer .first p, 
+.footer .first p a {
+    color: rgba(255, 255, 255, 0.452);
+}
+.footer .first p span {
+    font-weight: 900;
+    color: white;
+}
+
+.footer .middle ul {
+    list-style: none;
+    padding: 0%;
+
+}
+
+.footer .middle ul li {
+    padding: .2rem 0;
+}
+.footer .middle a {
+    color: rgba(255, 255, 255, 0.801);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+/* End Contact */
